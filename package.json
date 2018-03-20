@@ -1,0 +1,10 @@
+{
+  "name": "stylepunch_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "pgsil <email@email.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
