@@ -50,10 +50,12 @@ app.get('/styles/:styles', (req, res) => {
     else {
         res.sendStatus(500)
     }
-})
+});
 
-app.get('/cached/:file', (req, res) => res.sendFile(__dirname + '/cached/' + req.params.file))
+app.get('/cached/:file', (req, res) => res.sendFile(__dirname + '/cached/' + req.params.file));
 
-app.get('/*', (req, res) => res.sendStatus(404))
+app.get('/list', (req, res) => res.sendFile(__dirname + '/data.json'));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.get('/*', (req, res) => res.sendStatus(404));
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
