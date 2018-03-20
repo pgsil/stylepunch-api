@@ -58,4 +58,4 @@ app.get('/list', (req, res) => res.sendFile(__dirname + '/data.json'));
 
 app.get('/*', (req, res) => res.sendStatus(404));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'));
