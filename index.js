@@ -44,6 +44,12 @@ const createCss = (styleString, database) => {
   return writeNewStyle(getStylesFromUrl(styleString, database));
 };
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
     res.send("https://" + req.get("host") + createCss(req.params.styles, jsonDatabase));
