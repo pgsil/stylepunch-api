@@ -1,16 +1,16 @@
 {
-    "nogradquote": {
-        "code": "@import url('https://bryanhaley.github.io/FPCUB/no-grad-quote.css');",
-        "author": "BryBreadmin",
-        "image": "https://imgur.com/dhiJbX.jpg",
-        "url": "http://facepunch.com",
-        "title": "notitle"
-    },
-    "awfullydark": {
-        "code": "@import url('https://pgsil.github.io/awfullydark2/styles.css');",
-        "author": "Inacio",
-        "image": "https://imgur.com/dhiJbX.jpg",
-        "url": "http://facepunch.com",
-        "title": "notitle"
-    }
+  "nogradquote": {
+    "code": "@import url('https://bryanhaley.github.io/FPCUB/no-grad-quote.css');",
+    "author": "BryBreadmin",
+    "image": "https://imgur.com/dhiJbX.jpg",
+    "url": "http://facepunch.com",
+    "title": "No gradient quotes(?)"
+  },
+  "awfullydark": {
+    "code": "@import url('https://pgsil.github.io/awfullydark2/styles.css');",
+    "author": "Inacio",
+    "image": "https://imgur.com/dhiJbX.jpg",
+    "url": "http://facepunch.com",
+    "title": "Awfully Dark II"
+  }
 }
