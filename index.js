@@ -46,7 +46,7 @@ const createCss = (styleString, database) => {
 
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
-    res.send(req.protocol + "://" + req.get("host") + createCss(req.params.styles, jsonDatabase));
+    res.send("https://" + req.get("host") + createCss(req.params.styles, jsonDatabase));
   } else {
     res.sendStatus(500);
   }
