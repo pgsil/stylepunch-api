@@ -7,27 +7,12 @@ const jsonDatabase = require("./data");
 
 const getStylesFromUrl = (styleString, database) => {
   const styles = styleString.split(",");
-
-  let hasAllStyles = true;
-
-  styles.forEach(element => {
-    if (!(element in database)) {
-      hasAllStyles = false;
-      console.log(element + " not found");
-    }
-  });
-
-  let styleCode = "";
-
-  if (hasAllStyles) {
-    styles.forEach(element => {
-      styleCode = styleCode + database[element].code;
-    });
-
-    return styleCode;
-  } else {
+  
+  const hasAllStyles = styles.every(style => database.includes(style));
+  if (!hasAllStyles) {
     throw new Error("Bad input. One or more styles don't exist");
   }
+  return styles.reduce((acc, val) => acc + val, '');
 };
 
 const writeNewStyle = cssString => {
@@ -60,7 +45,6 @@ app.get("/styles/:styles", (req, res) => {
 
 app.get("/cached/:file", (req, res) => {
   res.set("Content-Type", "text/css");
-
   res.sendFile(__dirname + "/cached/" + req.params.file);
 });
 
