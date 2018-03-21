@@ -53,7 +53,8 @@ app.get("/styles/:styles", (req, res) => {
 });
 
 app.get("/cached/:file", (req, res) => {
-  res.writeHead("Content-Type: text/css");
+  res.set("Content-Type", { "Content-Type": "text/css" });
+
   res.sendFile(__dirname + "/cached/" + req.params.file);
 });
 
