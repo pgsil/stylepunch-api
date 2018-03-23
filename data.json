@@ -12,5 +12,132 @@
     "image": "https://imgur.com/dhiJbX.jpg",
     "url": "http://facepunch.com",
     "title": "Awfully Dark II"
+  },
+  "awfullywhite": {
+    "code": "@import url('https://xoin.github.io/Awfully-White/Awfullywhite.css');",
+    "author": "Teddybeer",
+    "image":
+      "https://files.facepunch.com/forum/upload/718/0ba36a84-dbce-44c6-8c60-1374fb8c95ea/image.png",
+    "url": "https://forum.facepunch.com/f/meta/gvro/Facepunch-Awfully-White/",
+    "title": "Awfully White"
+  },
+  "doublecolumn": {
+    "code": " @import url('https://pgsil.github.io/awfullydark2/optionals/dblClmn.css');",
+    "author": "Inacio and Diwako",
+    "image": "https://vgy.me/xiXWMK.png",
+    "url": "https://forum.facepunch.com/f/meta/rpkv",
+    "title": "Double column"
+  },
+  "darkspoilers": {
+    "code": "@import url('https://pgsil.github.io/awfullydark2/optionals/blkSplr.css');",
+    "author": "Inacio",
+    "image":
+      "https://files.facepunch.com/forum/upload/718/924f0229-1dc2-44e2-96f2-e6ef5471e5b3/ipQqAl.gif",
+    "url": "https://forum.facepunch.com/f/meta/rpkv",
+    "title": "Dark Spoilers"
+  },
+  "animratings": {
+    "code": "@import url('https://pgsil.github.io/awfullydark2/optionals/animRatings.css');",
+    "author": "Inacio",
+    "image":
+      "https://files.facepunch.com/forum/upload/718/0279d462-6e4d-431b-8eed-870007f1a051/OxqqoK.gif",
+    "url": "https://forum.facepunch.com/f/meta/rpkv",
+    "title": "Animated Ratings"
+  },
+  "trannysparent": {
+    "code": "@import url('https://kurozael.github.io/trannysparent/styles.css');",
+    "author": "kurozael, Inacio, ﻿diwako﻿",
+    "image":
+      "https://files.facepunch.com/forum/upload/1961/99424fe0-b69d-41ef-9180-54de8f5f1a9e/Screenshot_1.png",
+    "url": "http://kurozael.com",
+    "title": "Trannysparent (Transparent UI)"
+  },
+  "backgroundavatarreplacement": {
+    "code":
+      "@import url('https://mezzokoko.github.io/newpunch-fixedbackgrounds/newpunch-backgroundavatarreplacement.css');",
+    "author": "mezzokoko",
+    "image": "https://i.imgur.com/uL99LJg.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/7/#postcuxidt",
+    "title": "Background Avatar Replacement"
+  },
+  "fixedbackgrounds": {
+    "code":
+      "@import url('https://mezzokoko.github.io/newpunch-fixedbackgrounds/newpunch-fixedbackgrounds.css');",
+    "author": "mezzokoko",
+    "image": "https://i.imgur.com/uL99LJg.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/7/#postcuxidt",
+    "title": "Fixed Backgroundcropping"
+  },
+  "minimizedprofilecard": {
+    "code":
+      "@import url('https://mezzokoko.github.io/newpunch-fixedbackgrounds/newpunch-minimizedprofilecard.css');",
+    "author": "mezzokoko",
+    "image": "https://i.imgur.com/JnUg5ks.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/7/#postcuxidt",
+    "title": "Minimized Profilecards"
+  },
+  "nolevelindicator": {
+    "code":
+      "@import url('https://mezzokoko.github.io/newpunch-fixedbackgrounds/newpunch-nolevelindicator.css');",
+    "author": "mezzokoko",
+    "image": "",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/7/#postcuxidt",
+    "title": "Remove Levelindicator"
+  },
+  "alteredusernames": {
+    "code":
+      "@import url('https://witheredgryphon.github.io/css/AlteredUsernames/AlteredUsernames.css');",
+    "author": "witheredgryphon",
+    "image": "https://i.imgur.com/KFJy9t5.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/6/#postccunfh",
+    "title": "Altered Usernames"
+  },
+  "largebackgrounds": {
+    "code":
+      "@import url('https://witheredgryphon.github.io/css/LargeBackgrounds/LargeBackgrounds.css');",
+    "author": "witheredgryphon",
+    "image": "https://i.imgur.com/KFJy9t5.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/5/#postbljxvn",
+    "title": "Large Backgrounds"
+  },
+  "posthighlight": {
+    "code": "@import url('https://witheredgryphon.github.io/css/PostHighlight/PostHighlight.css');",
+    "author": "witheredgryphon",
+    "image": "https://i.imgur.com/rLCUDiy.png",
+    "url":
+      "https://github.com/WitheredGryphon/witheredgryphon.github.io/tree/master/css/PostHighlight",
+    "title": "Post Highlighter"
+  },
+  "quickspoiler": {
+    "code": "@import url('https://witheredgryphon.github.io/css/QuickSpoiler/QuickSpoiler.css');",
+    "author": "witheredgryphon",
+    "image": "",
+    "url":
+      "https://github.com/WitheredGryphon/witheredgryphon.github.io/tree/master/css/QuickSpoiler",
+    "title": "Speedy Spoiler Transition"
+  },
+  "rightdrawer": {
+    "code":
+      "@import url('https://witheredgryphon.github.io/css/DrawerJustifiedRight/DrawerJustifiedRight.css');",
+    "author": "witheredgryphon",
+    "image": "https://i.imgur.com/JGgRT0v.png",
+    "url":
+      "https://github.com/WitheredGryphon/witheredgryphon.github.io/tree/master/css/DrawerJustifiedRight",
+    "title": "Right Justified Event Drawer"
+  },
+  "videoplayerfix": {
+    "code":
+      "@import url('https://witheredgryphon.github.io/css/VideoPlayerFix/VideoPlayerFix.css');",
+    "author": "witheredgryphon",
+    "image": "https://i.imgur.com/SdzZ4cS.jpg",
+    "url":
+      "https://forum.facepunch.com/f/meta/rpkv/Facepunch-Ricing-Central-custom-CSS-styles-scripts-requests-and-more/13/#postcuzbgc",
+    "title": "Video Player Size Fix"
   }
 }
