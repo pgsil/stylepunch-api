@@ -83,6 +83,6 @@ app.get("/*", (req, res) => res.sendStatus(404));
 
 const server = https.createServer(options, app);
 
-server.listen(process.env.PORT || 80, () =>
-  console.log("Example app listening on port " + process.env.PORT || 80)
+server.listen(process.env.PORT || 3000, () =>
+  console.log("Example app listening on port " + process.env.PORT || 3000)
 );
