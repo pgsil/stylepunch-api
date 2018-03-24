@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const randStr = require("randomstring").generate;
+const https = require("https");
 
+const cloudStore = require("./gcloudapi").uploadFile;
 const jsonDatabase = require("./data");
 
 const getStylesFromUrl = (styleString, database) => {
@@ -40,8 +42,13 @@ const writeNewStyle = cssString => {
   return "/cached/" + filePath;
 };
 
+const uploadFileToCloud = filePath => {
+  fs.readFileSync(filePath);
+  cloudStore();
+};
+
 const createCss = (styleString, database) => {
-  return writeNewStyle(getStylesFromUrl(styleString, database));
+  return uploadFileToCloud(writeNewStyle(getStylesFromUrl(styleString, database)));
 };
 
 app.use((req, res, next) => {
@@ -68,4 +75,6 @@ app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
 
 app.get("/*", (req, res) => res.sendStatus(404));
 
-app.listen(process.env.PORT || 3000, () => console.log("Example app listening on port 3000!"));
+const server = https.createServer(process.env.PORT || 80, () =>
+  console.log("Example app listening on port " + process.env.PORT || 80)
+);
