@@ -48,7 +48,7 @@ const uploadFileToCloud = filePath => {
 };
 
 const createCss = (styleString, database) => {
-  return uploadFileToCloud(writeNewStyle(getStylesFromUrl(styleString, database)));
+  return writeNewStyle(getStylesFromUrl(styleString, database));
 };
 
 app.use((req, res, next) => {
