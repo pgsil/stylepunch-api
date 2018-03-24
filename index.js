@@ -51,6 +51,12 @@ const createCss = (styleString, database) => {
   return writeNewStyle(getStylesFromUrl(styleString, database));
 };
 
+const options = {
+  ca: [fs.readFileSync(__dirname + "/certs/example.csr")],
+  cert: fs.readFileSync(__dirname + "/certs/example.crt"),
+  key: fs.readFileSync(__dirname + "/certs/example.key")
+};
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -75,6 +81,8 @@ app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
 
 app.get("/*", (req, res) => res.sendStatus(404));
 
-const server = https.createServer(process.env.PORT || 80, () =>
+const server = https.createServer(options, app);
+
+server.listen(process.env.PORT || 80, () =>
   console.log("Example app listening on port " + process.env.PORT || 80)
 );
