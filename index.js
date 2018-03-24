@@ -4,7 +4,7 @@ const fs = require("fs");
 const randStr = require("randomstring").generate;
 const https = require("https");
 
-const cloudStore = require("./gcloudapi").uploadFile;
+// const cloudStore = require("./gcloudapi").uploadFile;
 const jsonDatabase = require("./data");
 
 const getStylesFromUrl = (styleString, database) => {
