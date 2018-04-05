@@ -87,4 +87,6 @@ app.get("/.well-known/acme-challenge/:file", (req, res) => {
 
 app.get("/*", (req, res) => res.sendStatus(404));
 
-app.listen(PORT, () => console.log("Example app listening on port 3000!"));
+const server = https.createServer(options, app);
+
+server.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
