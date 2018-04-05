@@ -81,6 +81,10 @@ app.get("/cached/:file", (req, res) => {
 
 app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
 
+app.get("/.well-known/acme-challenge/:file", (req, res) => {
+  res.sendFile(__dirname + req.params.file);
+});
+
 app.get("/*", (req, res) => res.sendStatus(404));
 
 app.listen(PORT, () => console.log("Example app listening on port 3000!"));
