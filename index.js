@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const randStr = require("randomstring").generate;
+const http = require("http");
 const https = require("https");
 
 // const cloudStore = require("./gcloudapi").uploadFile;
@@ -65,6 +66,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(function(req, resp, next) {
+  if (req.headers["x-forwarded-proto"] == "http") {
+    return resp.redirect(301, "https://" + req.headers.host + "/");
+  } else {
+    return next();
+  }
+});
+
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
     res.send("https://" + req.get("host") + createCss(req.params.styles, jsonDatabase));
@@ -81,12 +90,7 @@ app.get("/cached/:file", (req, res) => {
 
 app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
 
-app.get("/.well-known/acme-challenge/:file", (req, res) => {
-  res.sendFile(__dirname + "/.well-known/acme-challenge/" + req.params.file);
-});
-
 app.get("/*", (req, res) => res.sendStatus(404));
 
-const server = https.createServer(options, app);
-
-server.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+http.createServer(app).listen(80);
+https.createServer(options, app).listen(443);
