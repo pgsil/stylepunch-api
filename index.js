@@ -34,8 +34,8 @@ const getStylesFromUrl = (styleString, database) => {
   }
 };
 
-const writeNewStyle = cssString => {
-  const filePath = cssString.split(",").join("") + ".css";
+const writeNewStyle = (cssString, styleString) => {
+  const filePath = styleString.split(",").join("") + ".css";
 
   fs.writeFileSync("./cached/" + filePath, cssString, err => {
     throw new Error(err);
@@ -50,7 +50,7 @@ const uploadFileToCloud = filePath => {
 };
 
 const createCss = (styleString, database) => {
-  return writeNewStyle(getStylesFromUrl(styleString, database));
+  return writeNewStyle(getStylesFromUrl(styleString, database), styleString);
 };
 
 const options = {
