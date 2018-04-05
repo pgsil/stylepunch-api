@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const randStr = require("randomstring").generate;
 const http = require("http");
 const https = require("https");
 
@@ -36,7 +35,7 @@ const getStylesFromUrl = (styleString, database) => {
 };
 
 const writeNewStyle = cssString => {
-  const filePath = randStr(6) + ".css";
+  const filePath = cssString.split(",").join("") + ".css";
 
   fs.writeFileSync("./cached/" + filePath, cssString, err => {
     throw new Error(err);
