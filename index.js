@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const randStr = require("randomstring").generate;
+const https = require("https");
 
+// const cloudStore = require("./gcloudapi").uploadFile;
 const jsonDatabase = require("./data");
 
 const PORT = "80";
@@ -42,8 +44,19 @@ const writeNewStyle = cssString => {
   return "/cached/" + filePath;
 };
 
+const uploadFileToCloud = filePath => {
+  fs.readFileSync(filePath);
+  cloudStore();
+};
+
 const createCss = (styleString, database) => {
   return writeNewStyle(getStylesFromUrl(styleString, database));
+};
+
+const options = {
+  ca: [fs.readFileSync(__dirname + "/certs/example.csr")],
+  cert: fs.readFileSync(__dirname + "/certs/example.crt"),
+  key: fs.readFileSync(__dirname + "/certs/example.key")
 };
 
 app.use((req, res, next) => {
