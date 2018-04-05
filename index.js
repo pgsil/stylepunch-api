@@ -54,9 +54,9 @@ const createCss = (styleString, database) => {
 };
 
 const options = {
-  ca: [fs.readFileSync(__dirname + "/certs/example.csr")],
-  cert: fs.readFileSync(__dirname + "/certs/example.crt"),
-  key: fs.readFileSync(__dirname + "/certs/example.key")
+  ca: [fs.readFileSync(__dirname + "/certs/ca_bundle.crt")],
+  cert: fs.readFileSync(__dirname + "/certs/certificate.crt"),
+  key: fs.readFileSync(__dirname + "/certs/private.key")
 };
 
 app.use((req, res, next) => {
