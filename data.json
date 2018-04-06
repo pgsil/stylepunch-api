@@ -1,17 +1,22 @@
 {
-  "nogradquote": {
-    "code": "@import url('https://bryanhaley.github.io/FPCUB/no-grad-quote.css');",
-    "author": "BryBreadmin",
-    "image": "https://imgur.com/dhiJbX.jpg",
-    "url": "http://facepunch.com",
-    "title": "No gradient quotes(?)"
+  "mobilebandaidfix": {
+    "code": "@import url('https://diwako.github.io/fpcss/mobile.css');",
+    "author": "diwako",
+    "image":
+      "https://files.facepunch.com/forum/upload/134/25ef8724-9881-43f7-b739-93e9814155e4/image.png",
+    "url":
+      "https://forum.facepunch.com/f/meta/bskto/Mobile-Bandaid-CSS-It-still-hurts-but-it-seems-better/",
+    "title": "Mobile Bandaid CSS",
+    "description": "Bandaid fix for using FP on mobile devices"
   },
   "awfullydark": {
     "code": "@import url('https://pgsil.github.io/awfullydark2/styles.css');",
-    "author": "Inacio",
-    "image": "https://imgur.com/dhiJbX.jpg",
+    "author": "Inacio and Diwako",
+    "image":
+      "https://files.facepunch.com/forum/upload/718/e070c806-334e-44c8-924e-3f2da7064394/image.png",
     "url": "http://facepunch.com",
-    "title": "Awfully Dark II"
+    "title": "Awfully Dark II",
+    "description": "Makes Facepunch dark, pretty and pleasant to use"
   },
   "awfullywhite": {
     "code": "@import url('https://xoin.github.io/Awfully-White/Awfullywhite.css');",
