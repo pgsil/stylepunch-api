@@ -9,6 +9,12 @@ const jsonDatabase = require("./data");
 
 const PORT = "80";
 
+const options = {
+  ca: [fs.readFileSync(__dirname + "/certs/ca_bundle.crt")],
+  cert: fs.readFileSync(__dirname + "/certs/certificate.crt"),
+  key: fs.readFileSync(__dirname + "/certs/private.key")
+};
+
 const getStylesFromUrl = (styleString, database) => {
   const styles = styleString.split(",");
 
@@ -53,12 +59,6 @@ const createCss = (styleString, database) => {
   return writeNewStyle(getStylesFromUrl(styleString, database), styleString);
 };
 
-const options = {
-  ca: [fs.readFileSync(__dirname + "/certs/ca_bundle.crt")],
-  cert: fs.readFileSync(__dirname + "/certs/certificate.crt"),
-  key: fs.readFileSync(__dirname + "/certs/private.key")
-};
-
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -84,7 +84,9 @@ app.get("/styles/:styles", (req, res) => {
 app.get("/cached/:file", (req, res) => {
   res.set("Content-Type", "text/css");
 
-  res.sendFile(__dirname + "/cached/" + req.params.file);
+  res.sendFile(__dirname + "/cached/" + req.params.file, err => {
+    res.end();
+  });
 });
 
 app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
