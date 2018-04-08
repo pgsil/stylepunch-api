@@ -4,8 +4,7 @@
     "author": "diwako",
     "image":
       "https://files.facepunch.com/forum/upload/134/25ef8724-9881-43f7-b739-93e9814155e4/image.png",
-    "url":
-      "https://forum.facepunch.com/f/meta/bskto/",
+    "url": "https://forum.facepunch.com/f/meta/bskto/",
     "title": "Mobile Bandaid CSS",
     "description": "Bandaid fix for using FP on mobile devices"
   },
@@ -139,9 +138,10 @@
   "colorfultabs": {
     "code": "@import url('https://witheredgryphon.github.io/css/ColorfulTabs/ColorfulTabs.css');",
     "author": "witheredgryphon",
-    "image": "https://files.facepunch.com/forum/upload/718/42e3a6af-500e-441a-9c84-1e5a9bf88924/image.png",
+    "image":
+      "https://files.facepunch.com/forum/upload/718/42e3a6af-500e-441a-9c84-1e5a9bf88924/image.png",
     "url": "https://forum.facepunch.com/f/meta/bsocz/Colorful-Tabs/",
     "title": "Colorful Tabs (REQUIRES Right Justified Drawer)",
-    "description": "Replaces Tags with Colorful Tabs (REQUIRES Right Justified Drawer to Use).",
+    "description": "Replaces Tags with Colorful Tabs (REQUIRES Right Justified Drawer to Use)."
   }
 }
