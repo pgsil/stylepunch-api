@@ -143,5 +143,13 @@
     "url": "https://forum.facepunch.com/f/meta/bsocz/Colorful-Tabs/",
     "title": "Colorful Tabs (REQUIRES Right Justified Drawer)",
     "description": "Replaces Tags with Colorful Tabs (REQUIRES Right Justified Drawer to Use)."
-  }
+  },
+  "gradients": {
+    "code": "@import url('https://ottworks.github.io/facepunch-css/gradients.css');",
+    "author": "Ott",
+    "image": "https://files.facepunch.com/forum/upload/596/acb32576-fdb0-492a-992b-1fe7a34a03fc/image.png",
+    "url": "https://github.com/ottworks/facepunch-css/blob/master/gradients.css",
+    "title": "Gradients",
+    "description": "Carefully measured post gradients from the old forums."
+}
 }
