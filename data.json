@@ -96,9 +96,11 @@
     "code": "@import url('https://lordcrypto2.github.io/fpstyles/usernames.css');",
     "author": "lordcrypto",
     "image": "https://i.imgur.com/lqLpyAG.png",
-    "url": "https://forum.facepunch.com/f/meta/bsoli/Stylepunch-the-Steam-Workshop-of-Facepunch-Custom-CSS/2/#postcvmqsx",
+    "url":
+      "https://forum.facepunch.com/f/meta/bsoli/Stylepunch-the-Steam-Workshop-of-Facepunch-Custom-CSS/2/#postcvmqsx",
     "title": "Altered Usernames (Mobile-friendly)",
-    "description": "a literal fork of witheredgryphon's names to allow for it to look nice in mobile",
+    "description":
+      "a literal fork of witheredgryphon's names to allow for it to look nice in mobile"
   },
   "alteredusernames": {
     "code":
@@ -155,9 +157,10 @@
   "gradients": {
     "code": "@import url('https://ottworks.github.io/facepunch-css/gradients.css');",
     "author": "Ott",
-    "image": "https://files.facepunch.com/forum/upload/596/acb32576-fdb0-492a-992b-1fe7a34a03fc/image.png",
+    "image":
+      "https://files.facepunch.com/forum/upload/596/acb32576-fdb0-492a-992b-1fe7a34a03fc/image.png",
     "url": "https://github.com/ottworks/facepunch-css/blob/master/gradients.css",
     "title": "Gradients",
     "description": "Carefully measured post gradients from the old forums."
-}
+  }
 }
