@@ -162,5 +162,14 @@
     "url": "https://github.com/ottworks/facepunch-css/blob/master/gradients.css",
     "title": "Gradients",
     "description": "Carefully measured post gradients from the old forums."
+  },
+  "awfullydarkhackeredition": {
+    "code": "@import url('https://sirdabs.github.io/awfullydark2hackeredition/styles.css');",
+    "author": "Inacio+MoonDoggie",
+    "image":
+      "https://files.facepunch.com/forum/upload/280155/b99f32bd-5ef6-40d0-86bd-9cd92a1cbee9/Hls7u0H.png",
+    "url": "http://facepunch.com",
+    "title": "Awfully Dark Hacker Edition",
+    "description": "Green version of Awfully Dark"
   }
 }
