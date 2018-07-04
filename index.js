@@ -73,6 +73,8 @@ app.use(function(req, resp, next) {
   }
 });
 
+app.use(express.static('static'));
+
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
     res.send("https://" + req.get("host") + createCss(req.params.styles, jsonDatabase));
