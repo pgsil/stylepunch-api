@@ -10,9 +10,9 @@ const jsonDatabase = require("./data");
 const PORT = "80";
 
 const options = {
-  ca: [fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/chain.pem")],
-  cert: fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/cert.pem"),
-  key: fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/privkey.pem")
+  ca: [fs.readFileSync(__dirname + "/certs/chain.pem")],
+  cert: fs.readFileSync(__dirname + "/certs/cert.pem"),
+  key: fs.readFileSync(__dirname + "/certs/privkey.pem")
 };
 
 const getStylesFromUrl = (styleString, database) => {
