@@ -10,9 +10,9 @@ const jsonDatabase = require("./data");
 const PORT = "80";
 
 const options = {
-  ca: [fs.readFileSync(__dirname + "/certs/ca_bundle.crt")],
-  cert: fs.readFileSync(__dirname + "/certs/certificate.crt"),
-  key: fs.readFileSync(__dirname + "/certs/private.key")
+  ca: [fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/chain.pem")],
+  cert: fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/cert.pem"),
+  key: fs.readFileSync("/etc/letsencrypt/live/stylepunch.club/privkey.pem")
 };
 
 const getStylesFromUrl = (styleString, database) => {
@@ -73,7 +73,7 @@ app.use(function(req, resp, next) {
   }
 });
 
-app.use(express.static('static'));
+app.use(express.static("static"));
 
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
