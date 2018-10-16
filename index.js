@@ -1,9 +1,19 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const randStr = require("randomstring").generate;
+const http = require("http");
+const https = require("https");
 
+// const cloudStore = require("./gcloudapi").uploadFile;
 const jsonDatabase = require("./data");
+
+const PORT = "80";
+
+const options = {
+  ca: [fs.readFileSync(__dirname + "/certs/chain.pem")],
+  cert: fs.readFileSync(__dirname + "/certs/cert.pem"),
+  key: fs.readFileSync(__dirname + "/certs/privkey.pem")
+};
 
 const getStylesFromUrl = (styleString, database) => {
   const styles = styleString.split(",");
@@ -15,8 +25,8 @@ const getStylesFromUrl = (styleString, database) => {
   return styles.reduce((acc, val) => acc + val, '');
 };
 
-const writeNewStyle = cssString => {
-  const filePath = randStr(6) + ".css";
+const writeNewStyle = (cssString, styleString) => {
+  const filePath = styleString.split(",").join("") + ".css";
 
   fs.writeFileSync("./cached/" + filePath, cssString, err => {
     throw new Error(err);
@@ -25,8 +35,13 @@ const writeNewStyle = cssString => {
   return "/cached/" + filePath;
 };
 
+const uploadFileToCloud = filePath => {
+  fs.readFileSync(filePath);
+  cloudStore();
+};
+
 const createCss = (styleString, database) => {
-  return writeNewStyle(getStylesFromUrl(styleString, database));
+  return writeNewStyle(getStylesFromUrl(styleString, database), styleString);
 };
 
 app.use((req, res, next) => {
@@ -34,6 +49,16 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use(function(req, resp, next) {
+  if (req.headers["x-forwarded-proto"] == "http") {
+    return resp.redirect(301, "https://" + req.headers.host + "/");
+  } else {
+    return next();
+  }
+});
+
+app.use(express.static("static"));
 
 app.get("/styles/:styles", (req, res) => {
   if (req.params.styles.length > 0) {
@@ -45,11 +70,15 @@ app.get("/styles/:styles", (req, res) => {
 
 app.get("/cached/:file", (req, res) => {
   res.set("Content-Type", "text/css");
-  res.sendFile(__dirname + "/cached/" + req.params.file);
+
+  res.sendFile(__dirname + "/cached/" + req.params.file, err => {
+    res.end();
+  });
 });
 
 app.get("/list", (req, res) => res.sendFile(__dirname + "/data.json"));
 
 app.get("/*", (req, res) => res.sendStatus(404));
 
-app.listen(process.env.PORT || 3000, () => console.log("Example app listening on port 3000!"));
+http.createServer(app).listen(80);
+https.createServer(options, app).listen(443);
