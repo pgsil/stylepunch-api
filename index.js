@@ -4,7 +4,6 @@ const fs = require("fs");
 const http = require("http");
 const https = require("https");
 
-// const cloudStore = require("./gcloudapi").uploadFile;
 const jsonDatabase = require("./data");
 
 const PORT = "80";
